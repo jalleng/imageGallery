@@ -1,0 +1,29 @@
+{
+  "name": "image_gallery",
+  "version": "0.1.0",
+  "description": "An Image Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalleng/imageGallery.git"
+  },
+  "author": "jallengerber@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jalleng/imageGallery/issues"
+  },
+  "homepage": "https://github.com/jalleng/imageGallery#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.13"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
+  }
+}
