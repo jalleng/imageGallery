@@ -49,16 +49,16 @@ describe('the images resource', function() {
       }.bind(this));
     });
 
-   it('should be able to update an image', function(done) {
-      chai.request(url)
-        .put('/images/' + this.testImage._id)
-        .send({imageUrl: 'new Url'})
-        .end(function(err, res) {
-          expect(err).to.eql(null);
-          expect(res.body.msg).to.eql('success');
-          done();
-        });
-   });
+		it('should be able to update an image', function(done) {
+		  chai.request(url)
+		    .put('/images/' + this.testImage._id)
+		    .send({imageUrl: 'new Url'})
+		    .end(function(err, res) {
+		      expect(err).to.eql(null);
+		      expect(res.body.msg).to.eql('success');
+		      done();
+		    });
+		});
 
 		it('should be able to delete an image', function(done) {
 		  chai.request(url)
