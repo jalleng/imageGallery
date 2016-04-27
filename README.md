@@ -29,7 +29,7 @@ node server.js
  -Sixth: Navigate your browser to the following url.
   http://localhost:3000/
 
- ### TESTS
+### TESTS
 
  -In a third terminal window run this line.
  ```sh
