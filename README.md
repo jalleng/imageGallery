@@ -26,7 +26,7 @@ mongod --dbpath=./db --smallfiles
 node server.js
 ```
 
- -Sixth: Navigate your browser to the following url.
+ -Sixth: Navigate your browser to the following url-
   http://localhost:3000/
 
 ### TESTS
