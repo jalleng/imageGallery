@@ -1,22 +1,25 @@
+(function(){
 
 var image = {};
 
 image.setup = function(){
-	$("#submit").on("click", function(e){
-		e.preventDefault();
-		var imageUrl = $("#imageUrl").val();
-		var description = $("#imageDescription").val();
-		$.ajax({
-		  method: "POST",
-		  url: "/api/images",
-		  data: '{"imageUrl":"' + imageUrl + '", "imageDescription":"' + description + '"}',
-		  contentType: "application/json",
+  $("#submit").on("click", function(e){
+    e.preventDefault();
+    var imageUrl = $("#imageUrl").val();
+    var description = $("#imageDescription").val();
+    $.ajax({
+      method: "POST",
+      url: "/api/images",
+      data: '{"imageUrl":"' + imageUrl + '", "imageDescription":"' + description + '"}',
+      contentType: "application/json",
     	dataType: 'json'
-		})
-		  .done(function( data ) {
-		    console.log("Image Data Saved", data);
-		  });		
-	});
+    })
+      .done(function( data ) {
+        console.log("Image Data Saved", data);
+      });
+    $("#imageUrl").val('');	
+    $("#imageDescription").val('');
+  });
 
   $("#showImages").on("click", function(e){
     e.preventDefault();
@@ -33,7 +36,8 @@ image.setup = function(){
 
 image.toHtml = function(array) {
   var listItems = array.map(function(obj){
-    var element = '<li><img src="' + obj.imageUrl + '"></li>';
+   
+    var element = '<li><span>' + obj.imageDescription + '<img src="' + obj.imageUrl + '"></li>';
     return element;
   });
   console.log(listItems);
@@ -43,3 +47,5 @@ image.toHtml = function(array) {
 };
 
 image.setup()
+
+})();
